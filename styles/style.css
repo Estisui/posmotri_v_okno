@@ -66,6 +66,7 @@ ol {
 }
 
 .result__video-container {
+  position: relative;
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
@@ -76,6 +77,10 @@ ol {
   height: 100%;
   object-fit: fill;
   object-position: center;
+}
+
+.content__list {
+  position: relative;
 }
 
 .content__list-item {
