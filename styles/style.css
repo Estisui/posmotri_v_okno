@@ -37,6 +37,33 @@ ol {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  color: inherit;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+}
+
 .page {
   display: flex;
   justify-content: center;
@@ -70,18 +97,64 @@ ol {
   justify-content: space-between;
 }
 
+.search-form__fieldset {
+  border: none;
+}
+
 .search-form__fieldset-title {
   font-size: 18px;
   font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.search-form__textfield {
+  appearance: none;
+  padding: 0;
+  background-color: inherit;
+  border: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: inherit;
+  display: flex;
+  width: 225px;
+  height: 27px;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__label {
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFF;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  align-self: flex-end;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
   gap: 26px;
-  max-height: 534px;
-  overflow-y: scroll;
+  height: 534px;
+  overflow: auto;
   flex-grow: 1;
+  align-self: flex-start;
 }
 
 .title {
@@ -124,10 +197,11 @@ ol {
   font-size: 30px;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
+  margin-bottom: 6px;
 }
 
 .content__video-card-description {
-  line-height: 16.2px;
+  line-height: 90%;
 }
 
 .content__video-card-thumbnail {
@@ -139,4 +213,8 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+}
+
+.more-button {
+  width: 100%;
 }
